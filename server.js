@@ -14,8 +14,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000","https://frontendauthen.netlify.app/"] , // frontend origin
-  credentials: true                // allow cookies to be sent
+  origin: [
+    "http://localhost:3000",
+    "https://frontendauthen.netlify.app"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 app.use(cookieParser()); 
